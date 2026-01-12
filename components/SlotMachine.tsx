@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, useAnimation } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 interface SlotMachineProps {
@@ -18,7 +18,7 @@ const REPEATS = 6;
 
 export default function SlotMachine({ targetNumber, isSpinning, stopRequested, onSpinEnd, className }: SlotMachineProps) {
   const cleanTarget = targetNumber.padStart(3, '0');
-  const digits = cleanTarget.split('').map(Number);
+  const digits = useMemo(() => cleanTarget.split('').map(Number), [cleanTarget]);
   const [stopStage, setStopStage] = useState(0);
   const stopTimeoutsRef = useRef<number[]>([]);
 
