@@ -1,0 +1,1502 @@
+[
+  {
+    "id": "1",
+    "code": "001",
+    "name": "Đặng Đức Vinh",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "2",
+    "code": "002",
+    "name": "Nguyễn Xuân Trung",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "3",
+    "code": "003",
+    "name": "Nguyễn Gia Hùng",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "4",
+    "code": "004",
+    "name": "Hồ Anh Trang",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "5",
+    "code": "005",
+    "name": "Phạm Thanh Nam",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "6",
+    "code": "006",
+    "name": "Võ Đức Quang",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "7",
+    "code": "007",
+    "name": "Hoàng Minh Uyên",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "8",
+    "code": "008",
+    "name": "Đặng Gia Thành",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "9",
+    "code": "009",
+    "name": "Trần Hoài Lan",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "10",
+    "code": "010",
+    "name": "Phan Thu Dũng",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "11",
+    "code": "011",
+    "name": "Bùi Thị Tuấn",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "12",
+    "code": "012",
+    "name": "Hồ Khánh Nga",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "13",
+    "code": "013",
+    "name": "Trần Thị Lan",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "14",
+    "code": "014",
+    "name": "Đặng Hữu Quốc",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "15",
+    "code": "015",
+    "name": "Hồ Khánh Trí",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "16",
+    "code": "016",
+    "name": "Trần Thanh Quang",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "17",
+    "code": "017",
+    "name": "Trần Ngọc Minh",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "18",
+    "code": "018",
+    "name": "Hồ Thanh Phúc",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "19",
+    "code": "019",
+    "name": "Võ Minh Nga",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "20",
+    "code": "020",
+    "name": "Hồ Anh Thảo",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "21",
+    "code": "021",
+    "name": "Vũ Gia Tùng",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "22",
+    "code": "022",
+    "name": "Đỗ Thị Trí",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "23",
+    "code": "023",
+    "name": "Phạm Anh Tâm",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "24",
+    "code": "024",
+    "name": "Bùi Ngọc Phúc",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "25",
+    "code": "025",
+    "name": "Trần Xuân Nga",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "26",
+    "code": "026",
+    "name": "Đỗ Văn Việt",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "27",
+    "code": "027",
+    "name": "Trần Thu Xuân",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "28",
+    "code": "028",
+    "name": "Trần Thu Long",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "29",
+    "code": "029",
+    "name": "Đặng Đức Nhung",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "30",
+    "code": "030",
+    "name": "Lê Văn Uyên",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "31",
+    "code": "031",
+    "name": "Đặng Ngọc Thanh",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "32",
+    "code": "032",
+    "name": "Võ Xuân Tú",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "33",
+    "code": "033",
+    "name": "Trần Minh Phương",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "34",
+    "code": "034",
+    "name": "Trần Thị Nam",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "35",
+    "code": "035",
+    "name": "Ngô Anh Quỳnh",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "36",
+    "code": "036",
+    "name": "Võ Xuân Yến",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "37",
+    "code": "037",
+    "name": "Lý Thu Tuấn",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "38",
+    "code": "038",
+    "name": "Vũ Ngọc Thanh",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "39",
+    "code": "039",
+    "name": "Dương Thị Thắng",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "40",
+    "code": "040",
+    "name": "Dương Thị Tâm",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "41",
+    "code": "041",
+    "name": "Đỗ Đức Phương",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "42",
+    "code": "042",
+    "name": "Võ Ngọc Trọng",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "43",
+    "code": "043",
+    "name": "Ngô Thu Vân",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "44",
+    "code": "044",
+    "name": "Hồ Xuân Anh",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "45",
+    "code": "045",
+    "name": "Vũ Hữu Sơn",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "46",
+    "code": "046",
+    "name": "Nguyễn Thu Minh",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "47",
+    "code": "047",
+    "name": "Võ Đức Sang",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "48",
+    "code": "048",
+    "name": "Bùi Xuân Hùng",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "49",
+    "code": "049",
+    "name": "Huỳnh Đức Trung",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "50",
+    "code": "050",
+    "name": "Ngô Xuân Hải",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "51",
+    "code": "051",
+    "name": "Phạm Đức Tú",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "52",
+    "code": "052",
+    "name": "Bùi Văn Sơn",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "53",
+    "code": "053",
+    "name": "Phan Gia Xuân",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "54",
+    "code": "054",
+    "name": "Trần Gia Trọng",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "55",
+    "code": "055",
+    "name": "Ngô Hữu Phong",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "56",
+    "code": "056",
+    "name": "Lê Thanh Bình",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "57",
+    "code": "057",
+    "name": "Võ Minh Dương",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "58",
+    "code": "058",
+    "name": "Đặng Hữu Yên",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "59",
+    "code": "059",
+    "name": "Phan Minh Khánh",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "60",
+    "code": "060",
+    "name": "Bùi Anh Dũng",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "61",
+    "code": "061",
+    "name": "Hoàng Gia Quỳnh",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "62",
+    "code": "062",
+    "name": "Dương Hữu Hải",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "63",
+    "code": "063",
+    "name": "Nguyễn Minh Tú",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "64",
+    "code": "064",
+    "name": "Phạm Thị Phúc",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "65",
+    "code": "065",
+    "name": "Phan Gia Xuân",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "66",
+    "code": "066",
+    "name": "Phan Xuân Long",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "67",
+    "code": "067",
+    "name": "Trần Thị Ngọc",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "68",
+    "code": "068",
+    "name": "Vũ Đức Đạt",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "69",
+    "code": "069",
+    "name": "Phạm Hữu Phú",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "70",
+    "code": "070",
+    "name": "Ngô Minh Huy",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "71",
+    "code": "071",
+    "name": "Hồ Khánh Giang",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "72",
+    "code": "072",
+    "name": "Phạm Khánh Thanh",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "73",
+    "code": "073",
+    "name": "Phan Khánh Tuyết",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "74",
+    "code": "074",
+    "name": "Đặng Gia Tiến",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "75",
+    "code": "075",
+    "name": "Ngô Thị Ngọc",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "76",
+    "code": "076",
+    "name": "Lý Xuân Uyên",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "77",
+    "code": "077",
+    "name": "Hoàng Minh Long",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "78",
+    "code": "078",
+    "name": "Ngô Đức Lan",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "79",
+    "code": "079",
+    "name": "Lý Hoài Đạt",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "80",
+    "code": "080",
+    "name": "Dương Thị Thảo",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "81",
+    "code": "081",
+    "name": "Nguyễn Thị Vân",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "82",
+    "code": "082",
+    "name": "Lê Anh Tâm",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "83",
+    "code": "083",
+    "name": "Lê Minh Mai",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "84",
+    "code": "084",
+    "name": "Lê Xuân Tiến",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "85",
+    "code": "085",
+    "name": "Phạm Thanh Quốc",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "86",
+    "code": "086",
+    "name": "Phạm Văn Thành",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "87",
+    "code": "087",
+    "name": "Phạm Gia Thảo",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "88",
+    "code": "088",
+    "name": "Vũ Gia Khánh",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "89",
+    "code": "089",
+    "name": "Phan Khánh Tuyết",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "90",
+    "code": "090",
+    "name": "Lê Văn Bình",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "91",
+    "code": "091",
+    "name": "Trần Văn Quỳnh",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "92",
+    "code": "092",
+    "name": "Hồ Minh Xuân",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "93",
+    "code": "093",
+    "name": "Hồ Khánh Trâm",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "94",
+    "code": "094",
+    "name": "Đỗ Thanh Vân",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "95",
+    "code": "095",
+    "name": "Lý Ngọc Thảo",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "96",
+    "code": "096",
+    "name": "Trần Hữu Thắng",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "97",
+    "code": "097",
+    "name": "Đặng Minh Việt",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "98",
+    "code": "098",
+    "name": "Hồ Anh Anh",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "99",
+    "code": "099",
+    "name": "Trần Gia Nam",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "100",
+    "code": "100",
+    "name": "Bùi Thanh Nga",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "101",
+    "code": "101",
+    "name": "Huỳnh Ngọc Thanh",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "102",
+    "code": "102",
+    "name": "Đặng Đức Tân",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "103",
+    "code": "103",
+    "name": "Ngô Hoài Trọng",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "104",
+    "code": "104",
+    "name": "Đỗ Hoài Quang",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "105",
+    "code": "105",
+    "name": "Trần Văn Phong",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "106",
+    "code": "106",
+    "name": "Nguyễn Khánh Thành",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "107",
+    "code": "107",
+    "name": "Đặng Minh Thảo",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "108",
+    "code": "108",
+    "name": "Huỳnh Hoài Tuấn",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "109",
+    "code": "109",
+    "name": "Đặng Hoài Thủy",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "110",
+    "code": "110",
+    "name": "Lý Khánh Tài",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "111",
+    "code": "111",
+    "name": "Phạm Đức Quang",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "112",
+    "code": "112",
+    "name": "Vũ Đức Tiến",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "113",
+    "code": "113",
+    "name": "Đỗ Thị Đạt",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "114",
+    "code": "114",
+    "name": "Hồ Hoài Phương",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "115",
+    "code": "115",
+    "name": "Hồ Thị Hiếu",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "116",
+    "code": "116",
+    "name": "Nguyễn Minh Tùng",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "117",
+    "code": "117",
+    "name": "Phan Văn Trâm",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "118",
+    "code": "118",
+    "name": "Nguyễn Hoài Anh",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "119",
+    "code": "119",
+    "name": "Trần Ngọc Huy",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "120",
+    "code": "120",
+    "name": "Ngô Xuân Nam",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "121",
+    "code": "121",
+    "name": "Nguyễn Hữu Vinh",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "122",
+    "code": "122",
+    "name": "Vũ Gia Dương",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "123",
+    "code": "123",
+    "name": "Hoàng Đức Vinh",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "124",
+    "code": "124",
+    "name": "Phạm Hữu Long",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "125",
+    "code": "125",
+    "name": "Bùi Anh Trí",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "126",
+    "code": "126",
+    "name": "Võ Minh Bình",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "127",
+    "code": "127",
+    "name": "Huỳnh Đức Giang",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "128",
+    "code": "128",
+    "name": "Hoàng Khánh Trọng",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "129",
+    "code": "129",
+    "name": "Đặng Đức Đạt",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "130",
+    "code": "130",
+    "name": "Trần Văn Thắng",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "131",
+    "code": "131",
+    "name": "Phan Thị Giang",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "132",
+    "code": "132",
+    "name": "Ngô Thanh Phú",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "133",
+    "code": "133",
+    "name": "Võ Xuân Sang",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "134",
+    "code": "134",
+    "name": "Phan Văn Thảo",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "135",
+    "code": "135",
+    "name": "Vũ Xuân Giang",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "136",
+    "code": "136",
+    "name": "Đặng Thanh Lan",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "137",
+    "code": "137",
+    "name": "Trần Hoài Quân",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "138",
+    "code": "138",
+    "name": "Vũ Hữu Trọng",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "139",
+    "code": "139",
+    "name": "Dương Minh Anh",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "140",
+    "code": "140",
+    "name": "Đỗ Văn Lan",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "141",
+    "code": "141",
+    "name": "Đặng Đức Khánh",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "142",
+    "code": "142",
+    "name": "Lý Gia Minh",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "143",
+    "code": "143",
+    "name": "Bùi Hoài Lan",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "144",
+    "code": "144",
+    "name": "Lý Thị Trang",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "145",
+    "code": "145",
+    "name": "Nguyễn Thị Việt",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "146",
+    "code": "146",
+    "name": "Huỳnh Văn Long",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "147",
+    "code": "147",
+    "name": "Ngô Thị Cường",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "148",
+    "code": "148",
+    "name": "Dương Văn Quân",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "149",
+    "code": "149",
+    "name": "Đỗ Văn Hùng",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "150",
+    "code": "150",
+    "name": "Huỳnh Thị Tú",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "151",
+    "code": "151",
+    "name": "Nguyễn Văn Quốc",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "152",
+    "code": "152",
+    "name": "Ngô Xuân Sang",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "153",
+    "code": "153",
+    "name": "Vũ Đức Xuân",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "154",
+    "code": "154",
+    "name": "Nguyễn Xuân Yến",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "155",
+    "code": "155",
+    "name": "Trần Khánh Phương",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "156",
+    "code": "156",
+    "name": "Hoàng Anh Thảo",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "157",
+    "code": "157",
+    "name": "Phan Ngọc Anh",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "158",
+    "code": "158",
+    "name": "Huỳnh Gia Lan",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "159",
+    "code": "159",
+    "name": "Hồ Minh Trung",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "160",
+    "code": "160",
+    "name": "Nguyễn Thu Tâm",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "161",
+    "code": "161",
+    "name": "Lê Anh Vinh",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "162",
+    "code": "162",
+    "name": "Hoàng Anh Trang",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "163",
+    "code": "163",
+    "name": "Đặng Hữu Phong",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "164",
+    "code": "164",
+    "name": "Ngô Xuân Châu",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "165",
+    "code": "165",
+    "name": "Hồ Khánh Tài",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "166",
+    "code": "166",
+    "name": "Trần Đức Nam",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "167",
+    "code": "167",
+    "name": "Đỗ Thu Tâm",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "168",
+    "code": "168",
+    "name": "Phạm Ngọc Toàn",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "169",
+    "code": "169",
+    "name": "Vũ Khánh Trọng",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "170",
+    "code": "170",
+    "name": "Đỗ Đức Tú",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "171",
+    "code": "171",
+    "name": "Hoàng Thị Phú",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "172",
+    "code": "172",
+    "name": "Nguyễn Ngọc Dũng",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "173",
+    "code": "173",
+    "name": "Võ Hoài Minh",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "174",
+    "code": "174",
+    "name": "Bùi Thanh Giang",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "175",
+    "code": "175",
+    "name": "Võ Hoài Uyên",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "176",
+    "code": "176",
+    "name": "Phan Minh Mai",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "177",
+    "code": "177",
+    "name": "Võ Minh Mai",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "178",
+    "code": "178",
+    "name": "Lê Thanh Sơn",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "179",
+    "code": "179",
+    "name": "Ngô Hữu Anh",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "180",
+    "code": "180",
+    "name": "Phạm Khánh Tùng",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "181",
+    "code": "181",
+    "name": "Trần Hoài Huy",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "182",
+    "code": "182",
+    "name": "Lý Gia Châu",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "183",
+    "code": "183",
+    "name": "Võ Khánh Yến",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "184",
+    "code": "184",
+    "name": "Phan Thanh Hùng",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "185",
+    "code": "185",
+    "name": "Phan Minh Hiếu",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "186",
+    "code": "186",
+    "name": "Đỗ Văn Việt",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "187",
+    "code": "187",
+    "name": "Võ Anh Quỳnh",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "188",
+    "code": "188",
+    "name": "Đỗ Đức Phúc",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "189",
+    "code": "189",
+    "name": "Hồ Xuân Tuyết",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "190",
+    "code": "190",
+    "name": "Hoàng Văn Phú",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "191",
+    "code": "191",
+    "name": "Nguyễn Gia Cường",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "192",
+    "code": "192",
+    "name": "Võ Ngọc Nhung",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "193",
+    "code": "193",
+    "name": "Đỗ Đức Vân",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "194",
+    "code": "194",
+    "name": "Trần Gia Bình",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "195",
+    "code": "195",
+    "name": "Hồ Gia Minh",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "196",
+    "code": "196",
+    "name": "Vũ Gia Thảo",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "197",
+    "code": "197",
+    "name": "Đỗ Xuân Minh",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "198",
+    "code": "198",
+    "name": "Trần Đức Thảo",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "199",
+    "code": "199",
+    "name": "Đỗ Thu Quân",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "200",
+    "code": "200",
+    "name": "Vũ Hoài Thảo",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "201",
+    "code": "201",
+    "name": "Lê Hữu Phong",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "202",
+    "code": "202",
+    "name": "Phan Hữu Hải",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "203",
+    "code": "203",
+    "name": "Võ Văn Dương",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "204",
+    "code": "204",
+    "name": "Lý Văn Tâm",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "205",
+    "code": "205",
+    "name": "Huỳnh Thị Thủy",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "206",
+    "code": "206",
+    "name": "Ngô Đức Trâm",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "207",
+    "code": "207",
+    "name": "Lý Anh Tuyết",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "208",
+    "code": "208",
+    "name": "Ngô Văn Hòa",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "209",
+    "code": "209",
+    "name": "Huỳnh Hữu Thanh",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "210",
+    "code": "210",
+    "name": "Lý Văn Hùng",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "211",
+    "code": "211",
+    "name": "Huỳnh Ngọc Hiếu",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "212",
+    "code": "212",
+    "name": "Võ Ngọc Đạt",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "213",
+    "code": "213",
+    "name": "Lê Văn Uyên",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "214",
+    "code": "214",
+    "name": "Hồ Văn Dương",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "215",
+    "code": "215",
+    "name": "Ngô Thị Hiếu",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "216",
+    "code": "216",
+    "name": "Hồ Khánh Ngọc",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "217",
+    "code": "217",
+    "name": "Đặng Anh Tiến",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "218",
+    "code": "218",
+    "name": "Dương Xuân Khánh",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "219",
+    "code": "219",
+    "name": "Đỗ Gia Việt",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "220",
+    "code": "220",
+    "name": "Vũ Minh Thảo",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "221",
+    "code": "221",
+    "name": "Lê Thanh Thành",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "222",
+    "code": "222",
+    "name": "Dương Minh Yến",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "223",
+    "code": "223",
+    "name": "Hồ Anh Quang",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "224",
+    "code": "224",
+    "name": "Vũ Anh Trọng",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "225",
+    "code": "225",
+    "name": "Đỗ Thị Tân",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "226",
+    "code": "226",
+    "name": "Trần Thu Đạt",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "227",
+    "code": "227",
+    "name": "Ngô Anh Hiếu",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "228",
+    "code": "228",
+    "name": "Vũ Minh Tùng",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "229",
+    "code": "229",
+    "name": "Huỳnh Xuân Khánh",
+    "department": "Phòng Sản xuất"
+  },
+  {
+    "id": "230",
+    "code": "230",
+    "name": "Nguyễn Khánh Phương",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "231",
+    "code": "231",
+    "name": "Đặng Ngọc Hùng",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "232",
+    "code": "232",
+    "name": "Đỗ Thị Bình",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "233",
+    "code": "233",
+    "name": "Võ Gia Phúc",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "234",
+    "code": "234",
+    "name": "Phan Khánh Phú",
+    "department": "Ban Giám Đốc"
+  },
+  {
+    "id": "235",
+    "code": "235",
+    "name": "Đỗ Khánh Phong",
+    "department": "Phòng Logistics"
+  },
+  {
+    "id": "236",
+    "code": "236",
+    "name": "Hoàng Khánh Tùng",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "237",
+    "code": "237",
+    "name": "Vũ Khánh Hòa",
+    "department": "Phòng Kỹ thuật"
+  },
+  {
+    "id": "238",
+    "code": "238",
+    "name": "Hoàng Gia Thịnh",
+    "department": "Phòng Kế toán"
+  },
+  {
+    "id": "239",
+    "code": "239",
+    "name": "Huỳnh Hữu Thảo",
+    "department": "Phòng Marketing"
+  },
+  {
+    "id": "240",
+    "code": "240",
+    "name": "Phan Thị Long",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "241",
+    "code": "241",
+    "name": "Phạm Đức Thịnh",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "242",
+    "code": "242",
+    "name": "Đỗ Thị Xuân",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "243",
+    "code": "243",
+    "name": "Hoàng Văn Ngọc",
+    "department": "Phòng Kinh doanh"
+  },
+  {
+    "id": "244",
+    "code": "244",
+    "name": "Bùi Xuân Phương",
+    "department": "Phòng Mua hàng"
+  },
+  {
+    "id": "245",
+    "code": "245",
+    "name": "Phan Minh Thu",
+    "department": "Phòng Nhân sự"
+  },
+  {
+    "id": "246",
+    "code": "246",
+    "name": "Huỳnh Thanh Tùng",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "247",
+    "code": "247",
+    "name": "Vũ Anh Trâm",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "248",
+    "code": "248",
+    "name": "Lê Hữu Thảo",
+    "department": "Phòng Hành chính"
+  },
+  {
+    "id": "249",
+    "code": "249",
+    "name": "Phạm Đức Lan",
+    "department": "Phòng IT"
+  },
+  {
+    "id": "250",
+    "code": "250",
+    "name": "Bùi Ngọc Trí",
+    "department": "Phòng Logistics"
+  }
+]
