@@ -7,7 +7,7 @@ import logoAgs from '@/assets/logoags.png';
 import confetti from 'canvas-confetti';
 import SlotMachine from './SlotMachine';
 import { employees as defaultEmployees, PRIZES, type PrizeType, type Employee, type PrizeConfig } from '@/data/employees';
-import { Settings, X, Save, RotateCcw, Maximize2 } from 'lucide-react';
+import { Settings, X, Save, RotateCcw, Maximize2, Star } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface LuckyDrawProps {
@@ -40,6 +40,102 @@ function getSpinCountsFromWinners(nextWinners: Winner[]): Record<PrizeType, numb
   }
 
   return counts;
+}
+
+function BackgroundEffects() {
+  const [stars, setStars] = useState<Array<{ id: number; top: number; left: number; duration: number; delay: number; size: number }>>([]);
+  const [lines, setLines] = useState<Array<{ id: number; left: number; targetLeft: number; duration: number; delay: number; rotation: number }>>([]);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      const newStars = Array.from({ length: 20 }).map((_, i) => ({
+        id: i,
+        top: Math.random() * 100,
+        left: Math.random() * 100,
+        duration: Math.random() * 3 + 2,
+        delay: Math.random() * 5,
+        size: Math.random() * 10 + 10
+      }));
+      setStars(newStars);
+
+      const newLines = Array.from({ length: 15 }).map((_, i) => ({
+        id: i,
+        left: Math.random() * 100,
+        targetLeft: Math.random() * 100 + (Math.random() * 20 - 10),
+        duration: Math.random() * 4 + 4,
+        delay: Math.random() * 5,
+        rotation: Math.random() * 40 - 20
+      }));
+      setLines(newLines);
+    }, 0);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+       {/* Rotating Rays */}
+       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150vmax] h-[150vmax] opacity-[0.03]">
+         <motion.div 
+            animate={{ rotate: 360 }}
+            transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+            className="w-full h-full bg-[repeating-conic-gradient(from_0deg,transparent_0deg,transparent_10deg,#ffffff_10deg,#ffffff_20deg)]"
+            style={{ borderRadius: '50%' }}
+         />
+       </div>
+       
+       {/* Shooting Lines (Fireworks strands) */}
+       {lines.map((line) => (
+         <motion.div
+           key={`line-${line.id}`}
+           initial={{ 
+             opacity: 0, 
+             top: "120%",
+             left: `${line.left}%`
+           }}
+           animate={{ 
+             opacity: [0, 0.6, 0],
+             top: "-20%",
+             left: `${line.targetLeft}%` 
+           }}
+           transition={{
+             duration: line.duration,
+             repeat: Infinity,
+             delay: line.delay,
+             ease: "linear"
+           }}
+           className="absolute w-[2px] h-[150px] bg-gradient-to-t from-transparent via-yellow-200/30 to-transparent blur-[1px]"
+           style={{ transform: `rotate(${line.rotation}deg)` }}
+         />
+       ))}
+
+        {/* Floating Golden Stars */}
+        {stars.map((star) => (
+            <motion.div
+                key={`star-${star.id}`}
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{ 
+                    opacity: [0, 1, 0], 
+                    scale: [0.5, 1.2, 0.5],
+                    rotate: [0, 180, 360] 
+                }}
+                transition={{
+                    duration: star.duration,
+                    repeat: Infinity,
+                    delay: star.delay,
+                    ease: "easeInOut"
+                }}
+                className="absolute text-yellow-300 drop-shadow-[0_0_8px_rgba(253,224,71,0.6)]"
+                style={{
+                    top: `${star.top}%`,
+                    left: `${star.left}%`,
+                }}
+            >
+                <Star size={star.size} fill="currentColor" />
+            </motion.div>
+        ))}
+    </div>
+  );
 }
 
 export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
@@ -316,12 +412,18 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
     }
 
     triggerConfetti();
+    
+    // Play celebration sound
+    const audio = new Audio('/sounds/celebration.mp3');
+    audio.volume = 0.6;
+    audio.play().catch(e => console.log('Audio play failed:', e));
+
     setShowResult(true);
     
     // Auto-close for all prizes
     setTimeout(() => {
       setShowResult(false);
-    }, 5000);
+    }, 4000);
 
   }, [currentWinner, selectedPrize, triggerConfetti]);
 
@@ -376,6 +478,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
       {/* Background Gradient & Clouds */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#004a9f] to-[#002855]" />
       <div className="absolute inset-0 pointer-events-none opacity-30 bg-[url('https://www.transparenttextures.com/patterns/clouds.png')]" />
+      <BackgroundEffects />
       <div className="absolute top-8 left-8 z-900">
         <Image src={logoAgs} alt="AGS" priority className="h-10 w-auto drop-shadow-lg" />
       </div>
