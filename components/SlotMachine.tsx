@@ -129,7 +129,7 @@ function SlotDigit({
         {stripNumbers.map((num, i) => (
           <div 
             key={i} 
-            className="flex h-[140px] items-center justify-center text-7xl font-black text-blue-900 tracking-[0.15em]"
+            className="flex h-[140px] items-center justify-center text-7xl font-bold text-blue-900 tracking-[0.15em]"
           >
             {num}
           </div>

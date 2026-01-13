@@ -478,7 +478,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
                     onClick={handleSpin}
                     disabled={spinSettings.stopMode === 'auto' ? (isSpinning || stopRequested) : stopRequested}
                     className={cn(
-                      "mt-16 px-20 py-6 text-4xl font-black tracking-[0.2em] rounded-full shadow-2xl transition-all uppercase relative overflow-hidden group",
+                      "mt-16 px-20 py-6 text-4xl font-bold tracking-[0.2em] rounded-full shadow-2xl transition-all uppercase relative overflow-hidden group",
                       stopRequested
                         ? "bg-gray-500 text-gray-300 cursor-not-allowed border-4 border-gray-600"
                         : isSpinning
@@ -740,7 +740,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
                     initial={{ y: -20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2 }}
-                    className="text-blue-600 font-black text-2xl uppercase tracking-widest mb-6"
+                    className="text-blue-600 font-bold text-2xl uppercase tracking-widest mb-6"
                   >
                     Chúc mừng chiến thắng
                   </motion.div>
@@ -749,7 +749,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ type: "spring", bounce: 0.5, delay: 0.3 }}
-                    className="text-8xl font-black text-transparent bg-clip-text bg-gradient-to-b from-blue-600 to-blue-900 mb-6 drop-shadow-md"
+                    className="text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-blue-600 to-blue-900 mb-6 drop-shadow-md"
                   >
                     {currentWinner.code}
                   </motion.h2>
