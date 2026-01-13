@@ -46,6 +46,7 @@ export default function AdminDashboard() {
   const [spinSettings, setSpinSettings] = useState<{ stopMode: 'manual' | 'auto'; autoStopMs: number }>(() =>
     readJsonFromStorage<{ stopMode: 'manual' | 'auto'; autoStopMs: number }>('spinSettings', { stopMode: 'manual', autoStopMs: 3500 })
   );
+  const [enableKeyboard, setEnableKeyboard] = useState(() => readJsonFromStorage<boolean>('enableKeyboard', true));
   
   // UI States
   const [searchTerm, setSearchTerm] = useState('');
@@ -85,6 +86,13 @@ export default function AdminDashboard() {
                 console.error(error);
             }
         }
+        if (e.key === 'enableKeyboard' && e.newValue) {
+            try {
+                setEnableKeyboard(JSON.parse(e.newValue));
+            } catch (error) {
+                console.error(error);
+            }
+        }
     };
     window.addEventListener('storage', handleStorageChange);
     return () => window.removeEventListener('storage', handleStorageChange);
@@ -115,6 +123,15 @@ export default function AdminDashboard() {
     window.dispatchEvent(new StorageEvent('storage', {
         key: 'spinSettings',
         newValue: JSON.stringify(nextSettings)
+    }));
+  };
+
+  const saveKeyboardSetting = (enabled: boolean) => {
+    setEnableKeyboard(enabled);
+    localStorage.setItem('enableKeyboard', JSON.stringify(enabled));
+    window.dispatchEvent(new StorageEvent('storage', {
+        key: 'enableKeyboard',
+        newValue: JSON.stringify(enabled)
     }));
   };
 
@@ -496,6 +513,25 @@ export default function AdminDashboard() {
                 </div>
             ) : activeTab === 'prizes' ? (
                 <div className="space-y-6 max-w-2xl">
+                    <div className="bg-white/5 p-6 rounded-xl flex items-center justify-between border border-white/5">
+                        <div className="flex flex-col">
+                            <label className="text-lg text-blue-200 font-medium">Điều khiển bằng bàn phím</label>
+                            <span className="text-sm text-white/40">Sử dụng các phím mũi tên để điều khiển (Lên/Xuống: Chọn giải, Trái/Phải: Quay/Dừng)</span>
+                        </div>
+                        <button
+                            onClick={() => saveKeyboardSetting(!enableKeyboard)}
+                            className={cn(
+                                "w-14 h-7 rounded-full transition-colors relative",
+                                enableKeyboard ? "bg-blue-500" : "bg-white/10"
+                            )}
+                        >
+                            <div className={cn(
+                                "absolute top-1 w-5 h-5 rounded-full bg-white transition-all shadow-lg",
+                                enableKeyboard ? "left-8" : "left-1"
+                            )} />
+                        </button>
+                    </div>
+
                     <h3 className="text-xl font-bold text-blue-200 mb-6">Cấu Hình Số Lượng Giải Thưởng</h3>
                     {prizesConfig.map((prize, idx) => (
                         <div key={prize.id} className="bg-white/5 p-6 rounded-xl flex items-center justify-between border border-white/5">

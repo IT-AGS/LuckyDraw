@@ -47,6 +47,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
 
   const [employees, setEmployees] = useState<Employee[]>(() => readJsonFromStorage<Employee[]>('employees_data', defaultEmployees));
   const [prizesConfig, setPrizesConfig] = useState<PrizeConfig[]>(() => readJsonFromStorage<PrizeConfig[]>('prizesConfig', PRIZES));
+  const [enableKeyboard, setEnableKeyboard] = useState(() => readJsonFromStorage<boolean>('enableKeyboard', true));
   const [showConfig, setShowConfig] = useState(false);
   const [selectedPrize, setSelectedPrize] = useState<PrizeType>('SPECIAL');
   const [spinSettings, setSpinSettings] = useState<{ stopMode: 'manual' | 'auto'; autoStopMs: number }>(() =>
@@ -84,6 +85,14 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
           setPrizesConfig(JSON.parse(e.newValue));
         } catch (error) {
           console.error('Failed to parse config update', error);
+        }
+      }
+
+      if (e.key === 'enableKeyboard' && e.newValue) {
+        try {
+          setEnableKeyboard(JSON.parse(e.newValue));
+        } catch (error) {
+          console.error('Failed to parse keyboard config update', error);
         }
       }
       
@@ -153,10 +162,16 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
   const handleConfigSave = (newConfig: PrizeConfig[]) => {
     setPrizesConfig(newConfig);
     localStorage.setItem('prizesConfig', JSON.stringify(newConfig));
+    localStorage.setItem('enableKeyboard', JSON.stringify(enableKeyboard));
+
     // Manually trigger storage event for current window (since storage event only fires on other windows)
     window.dispatchEvent(new StorageEvent('storage', {
         key: 'prizesConfig',
         newValue: JSON.stringify(newConfig)
+    }));
+    window.dispatchEvent(new StorageEvent('storage', {
+        key: 'enableKeyboard',
+        newValue: JSON.stringify(enableKeyboard)
     }));
     setShowConfig(false);
   };
@@ -193,7 +208,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
     setShowResetConfirm(false);
   };
 
-  const handleSpin = () => {
+  const handleSpin = useCallback(() => {
     console.log("Handle spin clicked", { isSpinning, remainingSpins, selectedPrize, stopRequested });
 
     if (isSpinning) {
@@ -244,7 +259,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
         setStopRequested(true);
       }, ms);
     }
-  };
+  }, [isSpinning, spinSettings, stopRequested, remainingSpins, selectedPrize, employees, winners]);
 
   const triggerConfetti = useCallback(() => {
     const duration = 3 * 1000;
@@ -308,6 +323,52 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
     }, 5000);
 
   }, [currentWinner, selectedPrize, triggerConfetti]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    if (!enableKeyboard) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ignore if any modal/popup is open
+      if (showConfig || showResetConfirm || showResult || showAllWinners) return;
+
+      switch (e.key) {
+        case 'ArrowUp':
+          e.preventDefault();
+          if (!isSpinning) {
+            const currentIndex = prizesConfig.findIndex(p => p.id === selectedPrize);
+            if (currentIndex > 0) {
+              setSelectedPrize(prizesConfig[currentIndex - 1].id);
+            }
+          }
+          break;
+        case 'ArrowDown':
+          e.preventDefault();
+          if (!isSpinning) {
+            const currentIndex = prizesConfig.findIndex(p => p.id === selectedPrize);
+            if (currentIndex < prizesConfig.length - 1) {
+              setSelectedPrize(prizesConfig[currentIndex + 1].id);
+            }
+          }
+          break;
+        case 'ArrowRight': // Next -> Spin
+          e.preventDefault();
+          if (!isSpinning && !stopRequested) {
+            handleSpin();
+          }
+          break;
+        case 'ArrowLeft': // Back -> Stop
+          e.preventDefault();
+          if (isSpinning && !stopRequested) {
+            handleSpin();
+          }
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [showConfig, showResetConfirm, showResult, showAllWinners, isSpinning, stopRequested, prizesConfig, selectedPrize, handleSpin, enableKeyboard]);
 
   return (
     <div className="relative min-h-screen w-full bg-[#004a9f] overflow-hidden">
@@ -593,6 +654,25 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
                 </div>
 
                 <div className="space-y-6">
+                    <div className="bg-white/5 p-4 rounded-xl flex items-center justify-between border border-white/5">
+                        <div className="flex flex-col">
+                            <label className="text-lg text-blue-200 font-medium">Điều khiển bằng bàn phím</label>
+                            <span className="text-sm text-white/40">Sử dụng các phím mũi tên để điều khiển</span>
+                        </div>
+                        <button
+                            onClick={() => setEnableKeyboard(!enableKeyboard)}
+                            className={cn(
+                                "w-14 h-7 rounded-full transition-colors relative",
+                                enableKeyboard ? "bg-blue-500" : "bg-white/10"
+                            )}
+                        >
+                            <div className={cn(
+                                "absolute top-1 w-5 h-5 rounded-full bg-white transition-all shadow-lg",
+                                enableKeyboard ? "left-8" : "left-1"
+                            )} />
+                        </button>
+                    </div>
+
                     {prizesConfig.map((prize, idx) => (
                         <div key={prize.id} className="bg-white/5 p-4 rounded-xl flex items-center justify-between border border-white/5">
                             <label className="text-lg text-blue-200 font-medium">{prize.name}</label>
