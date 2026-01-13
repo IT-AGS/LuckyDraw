@@ -18,8 +18,8 @@ export interface PrizeConfig {
 }
 
 export const PRIZES: PrizeConfig[] = [
-  { id: 'SPECIAL', name: 'GIẢI ĐẶC BIỆT', maxSpins: 5 },
-  { id: 'FIRST', name: 'GIẢI NHẤT', maxSpins: 5 },
+  { id: 'SPECIAL', name: 'GIẢI ĐẶC BIỆT', maxSpins: 1 },
+  { id: 'FIRST', name: 'GIẢI NHẤT', maxSpins: 2 },
   { id: 'SECOND', name: 'GIẢI NHÌ', maxSpins: 5 },
   { id: 'THIRD', name: 'GIẢI BA', maxSpins: 20 },
 ];
