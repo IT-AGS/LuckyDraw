@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import confetti from 'canvas-confetti';
 import SlotMachine from './SlotMachine';
 import { employees as defaultEmployees, PRIZES, type PrizeType, type Employee, type PrizeConfig } from '@/data/employees';
@@ -143,6 +144,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
     window.addEventListener('resize', updateScale);
     return () => window.removeEventListener('resize', updateScale);
   }, []);
+
 
   const currentPrizeConfig = prizesConfig.find(p => p.id === selectedPrize) || prizesConfig[0];
   const remainingSpins = currentPrizeConfig.maxSpins - spinCounts[selectedPrize];
@@ -311,6 +313,9 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
       {/* Background Gradient & Clouds */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#004a9f] to-[#002855]" />
       <div className="absolute inset-0 pointer-events-none opacity-30 bg-[url('https://www.transparenttextures.com/patterns/clouds.png')]" />
+      <div className="absolute top-8 left-8 z-900">
+        <Image src="/logoags.png" alt="AGS" width={120} height={40} priority className="h-10 w-auto drop-shadow-lg" />
+      </div>
 
       <div className="absolute inset-0 z-10 flex items-center justify-center px-6 py-6">
         <div className="origin-center" style={{ transform: `scale(${uiScale})` }}>
@@ -320,14 +325,17 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
               animate={{ y: 0, opacity: 1 }}
               className="text-center mb-10"
             >
-              <div className="flex items-center justify-center gap-4 mb-2">
-                <span className="text-4xl">✈️</span>
-                <h1 className="text-6xl font-bold text-white drop-shadow-lg tracking-wider font-sans uppercase">
-                  LUCKY DRAW
-                </h1>
-                <span className="text-4xl">✈️</span>
+              <div className="grid grid-cols-12 items-center w-full mb-2 px-4">
+                <div className="col-span-12 flex items-center justify-center gap-4">
+                  <span className="text-4xl">✈️</span>
+                  <h1 className="text-6xl font-bold text-white drop-shadow-lg tracking-wider font-sans uppercase">
+                    LUCKY DRAW
+                  </h1>
+                  <span className="text-4xl">✈️</span>
+                </div>
+                <div className="col-span-3" />
               </div>
-              <p className="text-blue-200 text-xl font-light tracking-widest uppercase mb-4">AGS Appreciation Party</p>
+              <p className="text-blue-200 text-xl font-light tracking-widest uppercase mb-4">AGS YEAR-END PARTY</p>
             </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 w-full px-4 items-start">
@@ -365,6 +373,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
                             "text-xs px-2 py-1 rounded-md relative z-10",
                             selectedPrize === prize.id ? "bg-white/20 text-white" : "bg-black/20 text-blue-300"
                           )}
+                          suppressHydrationWarning
                         >
                           {prize.maxSpins - spinCounts[prize.id]}/{prize.maxSpins}
                         </span>
