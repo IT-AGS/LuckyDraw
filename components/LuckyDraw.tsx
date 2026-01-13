@@ -423,16 +423,14 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
     // Auto-close for all prizes
     setTimeout(() => {
       setShowResult(false);
-    }, 4000);
+    }, 5000);
 
   }, [currentWinner, selectedPrize, triggerConfetti]);
 
-  // Keyboard navigation
   useEffect(() => {
     if (!enableKeyboard) return;
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      // Ignore if any modal/popup is open
       if (showConfig || showResetConfirm || showResult || showAllWinners || showSelectedPrizeList) return;
 
       switch (e.key) {
@@ -454,18 +452,18 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
             }
           }
           break;
-        case 'ArrowRight': // Next -> Spin
+        case 'PageDown':
           e.preventDefault();
-          if (!isSpinning && !stopRequested) {
+          if (!stopRequested) {
             handleSpin();
           }
           break;
-        case 'ArrowLeft': // Back -> Stop
-          e.preventDefault();
-          if (isSpinning && !stopRequested) {
-            handleSpin();
-          }
-          break;
+        case 'PageUp':
+        e.preventDefault();
+        if (!stopRequested) {
+          handleSpin();
+        }
+        break;
       }
     };
 
