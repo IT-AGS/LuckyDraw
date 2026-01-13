@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import logoAgs from '@/assets/logoags.png';
 import confetti from 'canvas-confetti';
 import SlotMachine from './SlotMachine';
 import { employees as defaultEmployees, PRIZES, type PrizeType, type Employee, type PrizeConfig } from '@/data/employees';
@@ -314,7 +315,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
       <div className="absolute inset-0 bg-gradient-to-b from-[#004a9f] to-[#002855]" />
       <div className="absolute inset-0 pointer-events-none opacity-30 bg-[url('https://www.transparenttextures.com/patterns/clouds.png')]" />
       <div className="absolute top-8 left-8 z-900">
-        <Image src="/logoags.png" alt="AGS" width={120} height={40} priority className="h-10 w-auto drop-shadow-lg" />
+        <Image src={logoAgs} alt="AGS" priority className="h-10 w-auto drop-shadow-lg" />
       </div>
 
       <div className="absolute inset-0 z-10 flex items-center justify-center px-6 py-6">

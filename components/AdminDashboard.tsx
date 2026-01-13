@@ -472,7 +472,11 @@ export default function AdminDashboard() {
                                                         <button onClick={() => startEdit(emp)} className="p-2 hover:bg-white/10 rounded-lg text-blue-300 transition-colors">
                                                             <Edit2 size={18} />
                                                         </button>
-                                                        <button onClick={() => handleDeleteEmployee(emp.id)} className="p-2 hover:bg-white/10 rounded-lg text-red-400 transition-colors">
+                                                        <button 
+                                                            suppressHydrationWarning
+                                                            onClick={() => handleDeleteEmployee(emp.id)} 
+                                                            className="p-2 hover:bg-white/10 rounded-lg text-red-400 transition-colors"
+                                                        >
                                                             <Trash2 size={18} />
                                                         </button>
                                                     </div>

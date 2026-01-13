@@ -13,13 +13,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const basePath = process.env.NODE_ENV === 'production' ? '/LuckyDraw' : '';
+
 export const metadata: Metadata = {
   title: "AGS Lucky Draw",
   description: "AGS Lucky Draw",
   icons: {
-    icon: "/logoags.png",
-    shortcut: "/logoags.png",
-    apple: "/logoags.png",
+    icon: `${basePath}/logoags.png`,
+    shortcut: `${basePath}/logoags.png`,
+    apple: `${basePath}/logoags.png`,
   },
 };
 
