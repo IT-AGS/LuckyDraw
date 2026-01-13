@@ -7,7 +7,7 @@ import logoAgs from '@/assets/logoags.png';
 import confetti from 'canvas-confetti';
 import SlotMachine from './SlotMachine';
 import { employees as defaultEmployees, PRIZES, type PrizeType, type Employee, type PrizeConfig } from '@/data/employees';
-import { Settings, X, Save, RotateCcw } from 'lucide-react';
+import { Settings, X, Save, RotateCcw, Maximize2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface LuckyDrawProps {
@@ -64,6 +64,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
   const [showResult, setShowResult] = useState(false);
   const [showWarning, setShowWarning] = useState(false);
   const [showAllWinners, setShowAllWinners] = useState(false);
+  const [showSelectedPrizeList, setShowSelectedPrizeList] = useState(false);
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const autoStopTimeoutRef = useRef<number | null>(null);
   const stageRef = useRef<HTMLDivElement | null>(null);
@@ -330,7 +331,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
 
     const handleKeyDown = (e: KeyboardEvent) => {
       // Ignore if any modal/popup is open
-      if (showConfig || showResetConfirm || showResult || showAllWinners) return;
+      if (showConfig || showResetConfirm || showResult || showAllWinners || showSelectedPrizeList) return;
 
       switch (e.key) {
         case 'ArrowUp':
@@ -368,7 +369,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [showConfig, showResetConfirm, showResult, showAllWinners, isSpinning, stopRequested, prizesConfig, selectedPrize, handleSpin, enableKeyboard]);
+  }, [showConfig, showResetConfirm, showResult, showAllWinners, showSelectedPrizeList, isSpinning, stopRequested, prizesConfig, selectedPrize, handleSpin, enableKeyboard]);
 
   return (
     <div className="relative min-h-screen w-full bg-[#004a9f] overflow-hidden">
@@ -504,22 +505,31 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
                     <h2 className="text-white text-lg font-bold uppercase tracking-widest flex items-center gap-2">
                       <span className="text-yellow-400">🏆</span> Vinh danh
                     </h2>
-                    <button
-                      onClick={() => setShowAllWinners(true)}
-                      className="text-[10px] uppercase font-bold bg-blue-500/20 hover:bg-blue-500 hover:text-white text-blue-300 px-3 py-1.5 rounded-lg transition-all border border-blue-500/30"
-                    >
-                      Xem Tất Cả
-                    </button>
+                    <div className="flex items-center gap-2">
+                      <button
+                        onClick={() => setShowSelectedPrizeList(true)}
+                        className="p-1.5 bg-blue-500/20 hover:bg-blue-500 hover:text-white text-blue-300 rounded-lg transition-all border border-blue-500/30"
+                        title="Mở rộng"
+                      >
+                        <Maximize2 size={14} />
+                      </button>
+                      <button
+                        onClick={() => setShowAllWinners(true)}
+                        className="text-[10px] uppercase font-bold bg-blue-500/20 hover:bg-blue-500 hover:text-white text-blue-300 px-3 py-1.5 rounded-lg transition-all border border-blue-500/30"
+                      >
+                        Tất Cả
+                      </button>
+                    </div>
                   </div>
 
                   <div className="space-y-3 overflow-y-auto pr-2 flex-1 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent">
-                    {winners.length === 0 ? (
+                    {winners.filter(w => w.prize === selectedPrize).length === 0 ? (
                       <div className="flex flex-col items-center justify-center h-full text-blue-300/50 space-y-2">
                         <span className="text-4xl opacity-50">🎲</span>
-                        <p className="text-sm italic">Chưa có kết quả</p>
+                        <p className="text-sm italic">Chưa có kết quả giải này</p>
                       </div>
                     ) : (
-                      [...winners].reverse().map((winner, index) => (
+                      winners.filter(w => w.prize === selectedPrize).reverse().map((winner, index, arr) => (
                         <motion.div
                           key={`${winner.id}-${index}`}
                           initial={{ opacity: 0, x: 20 }}
@@ -535,7 +545,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
                                   : "bg-gradient-to-br from-blue-400 to-blue-600"
                               )}
                             >
-                              #{winners.length - index}
+                              #{arr.length - index}
                             </div>
                             <div>
                               <div className="font-bold text-white text-sm group-hover:text-blue-200 transition-colors">
@@ -713,6 +723,86 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
                     </button>
                 </div>
             </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Selected Prize Winners Popup */}
+      <AnimatePresence>
+        {showSelectedPrizeList && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-[#002855]/95 backdrop-blur-md flex flex-col h-screen"
+          >
+            {(() => {
+                const selectedWinners = winners.filter(w => w.prize === selectedPrize);
+                const isLargeList = selectedWinners.length > 5;
+                
+                return (
+                    <div className={cn(
+                        "mx-auto w-full flex flex-col h-full p-4 md:p-8 transition-all duration-300",
+                        isLargeList ? "max-w-7xl" : "max-w-4xl"
+                    )}>
+                        {/* Header */}
+                        <div className="flex justify-between items-center mb-6 shrink-0 border-b border-white/10 pb-4">
+                            <h2 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-widest drop-shadow-lg flex items-center gap-4">
+                                <span className="text-yellow-400">🏆</span>
+                                {PRIZES.find(p => p.id === selectedPrize)?.name}
+                                <span className="text-yellow-400">🏆</span>
+                            </h2>
+                            <div className="flex items-center gap-3">
+                                <button 
+                                    onClick={() => setShowSelectedPrizeList(false)}
+                                    className="p-3 bg-white/10 hover:bg-white/20 rounded-full text-white transition-colors"
+                                >
+                                    <X size={24} />
+                                </button>
+                            </div>
+                        </div>
+
+                        {/* Content List */}
+                        <div className="bg-white/5 rounded-3xl p-6 border border-white/10 flex flex-col h-full overflow-hidden">
+                            <div className={cn(
+                                "overflow-y-auto pr-2 flex-1 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent hover:scrollbar-thumb-white/30",
+                                isLargeList ? "grid grid-cols-1 md:grid-cols-2 gap-4 content-start" : "space-y-3"
+                            )}>
+                                {selectedWinners.length === 0 ? (
+                                    <div className="col-span-full flex flex-col items-center justify-center h-full text-blue-300/50 space-y-4">
+                                        <span className="text-6xl opacity-50">🎲</span>
+                                        <p className="text-xl italic">Chưa có kết quả cho giải này</p>
+                                    </div>
+                                ) : (
+                                    selectedWinners.reverse().map((winner, idx, arr) => (
+                                        <motion.div 
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            transition={{ delay: idx * 0.05 }}
+                                            key={idx} 
+                                            className="bg-white/10 p-4 rounded-xl flex items-center gap-4 hover:bg-white/20 transition-colors shrink-0"
+                                        >
+                                            <div className={cn(
+                                                "w-12 h-12 rounded-full flex items-center justify-center font-bold text-white text-lg shrink-0 shadow-lg",
+                                                selectedPrize === 'SPECIAL' ? "bg-yellow-500" : "bg-blue-500"
+                                            )}>
+                                                {arr.length - idx}
+                                            </div>
+                                            <div className="flex-1 min-w-0">
+                                                <div className="font-bold text-white truncate text-xl">{winner.name}</div>
+                                                <div className="text-blue-300 truncate text-base">{winner.department}</div>
+                                            </div>
+                                            <div className="font-mono font-bold text-yellow-400 text-3xl shrink-0 drop-shadow-md">
+                                                {winner.code}
+                                            </div>
+                                        </motion.div>
+                                    ))
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                );
+            })()}
           </motion.div>
         )}
       </AnimatePresence>

@@ -33,7 +33,7 @@ export default function SlotMachine({ targetNumber, isSpinning, stopRequested, o
     digits.forEach((_, index) => {
       const timeoutId = window.setTimeout(() => {
         setStopStage(index + 1);
-      }, 600 + index * 650);
+      }, 200 + index * 500);
       stopTimeoutsRef.current.push(timeoutId);
     });
 
