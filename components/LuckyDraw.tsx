@@ -839,13 +839,14 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
           >
             {(() => {
                 const selectedWinners = winners.filter(w => w.prize === selectedPrize);
+                const isVeryLargeList = selectedWinners.length >= 15;
                 const isLargeList = selectedWinners.length > 5;
                 const isSingle = selectedWinners.length === 1;
                 
                 return (
                     <div className={cn(
                         "mx-auto w-full flex flex-col h-full p-4 md:p-8 transition-all duration-300",
-                        isLargeList ? "max-w-7xl" : (isSingle ? "max-w-3xl" : "max-w-4xl")
+                        isVeryLargeList ? "max-w-[90vw]" : (isLargeList ? "max-w-7xl" : (isSingle ? "max-w-6xl" : "max-w-4xl"))
                     )}>
                         {/* Header */}
                         <div className="flex justify-between items-center mb-6 shrink-0 border-b border-white/10 pb-4">
@@ -868,7 +869,14 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
                         <div className="bg-white/5 rounded-3xl p-6 border border-white/10 flex flex-col h-full overflow-hidden">
                             <div className={cn(
                                 "overflow-y-auto pr-2 flex-1 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent hover:scrollbar-thumb-white/30",
-                                isSingle ? "flex items-center justify-center" : (isLargeList ? "grid grid-cols-1 md:grid-cols-2 gap-4 content-start" : "space-y-3")
+                                isSingle 
+                                    ? "flex items-center justify-center" 
+                                    : (isVeryLargeList 
+                                        ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 content-start"
+                                        : (isLargeList 
+                                            ? "grid grid-cols-1 md:grid-cols-2 gap-4 content-start" 
+                                            : "space-y-3")
+                                    )
                             )}>
                                 {selectedWinners.length === 0 ? (
                                     <div className="col-span-full flex flex-col items-center justify-center h-full text-blue-300/50 space-y-4">
@@ -882,7 +890,7 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
                                             <motion.div
                                                 initial={{ opacity: 0, scale: 0.95 }}
                                                 animate={{ opacity: 1, scale: 1 }}
-                                                className="relative bg-gradient-to-b from-blue-900/40 to-blue-800/30 border border-blue-400/30 rounded-3xl p-8 md:p-10 w-full max-w-2xl mx-auto shadow-[0_0_40px_rgba(96,165,250,0.25)]"
+                                                className="relative bg-gradient-to-b from-blue-900/40 to-blue-800/30 border border-blue-400/30 rounded-3xl p-8 md:p-10 w-full max-w-4xl mx-auto shadow-[0_0_40px_rgba(96,165,250,0.25)]"
                                             >
                                                 <div className="absolute -inset-1 rounded-3xl bg-gradient-to-r from-yellow-500/10 via-white/10 to-blue-500/10 blur-xl" />
                                                 <div className="relative z-10 flex items-center gap-6">
@@ -893,8 +901,8 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
                                                         1
                                                     </div>
                                                     <div className="flex-1 min-w-0">
-                                                        <div className="text-4xl md:text-5xl font-extrabold text-white truncate drop-shadow-md">{winner.name}</div>
-                                                        <div className="text-xl md:text-2xl text-blue-200 truncate">{winner.department}</div>
+                                                        <div className="text-4xl md:text-5xl font-extrabold text-white drop-shadow-md">{winner.name}</div>
+                                                        <div className="text-xl md:text-2xl text-blue-200">{winner.department}</div>
                                                     </div>
                                                     <div className="font-mono font-extrabold text-yellow-300 text-5xl md:text-6xl shrink-0 drop-shadow-lg">
                                                         {winner.code}
@@ -927,8 +935,8 @@ export default function LuckyDraw({ enableConfig = false }: LuckyDrawProps) {
                                                 {arr.length - idx}
                                             </div>
                                             <div className="flex-1 min-w-0">
-                                                <div className="font-bold text-white truncate text-xl">{winner.name}</div>
-                                                <div className="text-blue-300 truncate text-base">{winner.department}</div>
+                                                <div className="font-bold text-white text-xl">{winner.name}</div>
+                                                <div className="text-blue-300 text-base">{winner.department}</div>
                                             </div>
                                             <div className="font-mono font-bold text-yellow-400 text-3xl shrink-0 drop-shadow-md">
                                                 {winner.code}
